@@ -60,7 +60,13 @@ export default function Home() {
           </span>
         </h1>
       </main>
-      <footer className="fixed left-0 right-0 bottom-0 w-full flex justify-center items-center py-4 bg-transparent">
+      <footer className="fixed left-0 right-0 bottom-0 w-full flex justify-center items-center gap-6 py-4 bg-transparent">
+        <Link
+          href="/protel"
+          className="text-inherit no-underline text-lg opacity-70 transition-opacity duration-200 font-light hover:opacity-100"
+        >
+          Protel
+        </Link>
         <Link
           href="/impressum"
           className="text-inherit no-underline text-lg opacity-70 transition-opacity duration-200 font-light hover:opacity-100"
