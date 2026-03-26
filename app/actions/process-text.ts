@@ -80,11 +80,13 @@ export async function processText(
     });
 
     return { success: true, output: output.trim() };
-  } catch {
+  } catch (err) {
+    const message =
+      err instanceof Error ? err.message : "Unbekannter Fehler vom Provider.";
     return {
       success: false,
       error:
-        "Verarbeitung fehlgeschlagen. Pruefe AI_MODEL_PROVIDER und API-Key in .env.local.",
+        `Verarbeitung fehlgeschlagen (Provider: ${provider}). Ursache: ${message}`,
     };
   }
 }
